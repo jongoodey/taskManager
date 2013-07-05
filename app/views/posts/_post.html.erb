@@ -1,0 +1,17 @@
+
+  <tr id="sortable" class="<%= post.id %>">
+    <td><%= post.name %></td>
+    <td><%= post.title %></td>
+    <td><%= post.content %></td>
+    <td><%= post.project_id %></td>
+    <td><%= post.date_started %></td>
+    <td><%= post.time_started %></td>
+    <td><%= post.date_finished %></td>
+    <td><%= post.time_finished %></td>
+    <td><%= post.status %></td>
+    <td><%= post.completed %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :method => :delete, :remote => true, :class=>'delete_post' %></td>  
+  </tr>
+

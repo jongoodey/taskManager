@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @project.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @project.description %>
+</p>
+<% @project.posts.each do |post| %>
+<p>
+  <b>Title:</b>
+  <%= post.title %>
+</p>
+<p>
+  <b>Content:</b>
+  <%= post.content %>
+</p>
+<p>
+  <b>date_started:</b>
+  <%= post.date_started %>
+</p>
+<p>
+  <b>time_started:</b>
+  <%= post.time_started %>
+</p>
+<p>
+  <b>date_finished:</b>
+  <%= post.date_finished %>
+</p>
+<p>
+  <b>time_finished:</b>
+  <%= post.time_finished %>
+</p>
+<p>
+  <b>status:</b>
+  <%= post.status %>
+</p>
+<p>
+  <b>completed:</b>
+  <%= post.completed %>
+</p>
+
+<% end %>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

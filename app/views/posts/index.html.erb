@@ -1,0 +1,91 @@
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+ 
+  <script>
+  $(function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  });
+</script>
+
+<h1>Listing tasks</h1>
+<p>select project</p>
+<% Project.all.each do |project| %>
+  <%= project.name %>
+<% end %>
+
+<table class="post">
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>project_id</th>
+    <th>date_started</th>
+    <th>time_started</th>
+    <th>date_finished</th>
+    <th>time_finished</th>
+    <th>status</th>
+    <th>completed</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <%= render post %>
+<% end %>
+
+</div>
+</table>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
+
+<%= form_for(Post.new, :remote => true) do |f| %>  
+<div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.text_field :project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date_started %><br />
+    <%= f.text_field :date_started %>
+  </div>
+  <div class="field">
+    <%= f.label :time_started %><br />
+    <%= f.text_field :time_started %>
+  </div>
+  <div class="field">
+    <%= f.label :date_finished %><br />
+    <%= f.text_field :date_finished %>
+  </div>
+  <div class="field">
+    <%= f.label :time_finished %><br />
+    <%= f.text_field :time_finished %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :completed %><br />
+    <%= f.text_field :completed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
