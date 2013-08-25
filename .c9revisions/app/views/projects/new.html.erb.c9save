@@ -1,0 +1,2 @@
+{"ts":1377430675946,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"<h1>New project</h1>\n\n<%= render 'form' %>\n\n<%= link_to 'Back', projects_path %>\n"]],"start1":0,"start2":0,"length1":0,"length2":81}]],"length":81}
+{"contributors":[],"silentsave":false,"ts":1377430721859,"patch":[[{"diffs":[[0,"cts_path %>\n"],[1,"<p>test paragraph</p>\n"]],"start1":69,"start2":69,"length1":12,"length2":34}]],"length":103,"saved":false}
